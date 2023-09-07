@@ -1,14 +1,9 @@
 import os
 import pandas as pd
 import geopandas as gpd
-import plotly.express as px
 import pyproj
 import numpy as np
-import fiona
-import math
 import matplotlib.pyplot as plt
-from matplotlib import cm
-import plotly.graph_objects as go
 
 # Common directory
 username = os.environ.get("USERNAME")
