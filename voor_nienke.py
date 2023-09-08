@@ -33,8 +33,6 @@ else:
 # @Nienke: In jouw dataset van MinFin staat ook 'statnaam', dus die kun je ook in de "right_on" gebruiken.
 result = pd.merge(municipal_boundaries, coronasteun, left_on='statnaam', right_on='Gemeente', how='left')
 result.to_crs(pyproj.CRS.from_epsg(28992), inplace=True)
-# @Nienke: NB: Als je de repository binnenhaalt kun je gem_map.gpkg waarschijnlijk het beste wissen
-# of een andere naam geven. Anders gaat de code automatisch mijn tussenbestand inladen.
 result.to_file("gem_map.gpkg", driver='GPKG')
 result.set_index("statnaam")
 
